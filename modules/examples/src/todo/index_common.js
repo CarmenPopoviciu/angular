@@ -1,4 +1,4 @@
-import {bootstrap, Component, Decorator, Template, NgElement, If} from 'angular2/angular2';
+import {bootstrap, Component, Decorator, Template, NgElement} from 'angular2/angular2';
 
 // Angular 2.0 supports 3 basic types of directives:
 // - Component - the basic building blocks of Angular 2.0 apps. Backed by
@@ -72,8 +72,7 @@ class GreetingService {
   selector: 'zippy'
 })
 @Template({
-  url: 'zippy.html',
-  directives: [If]
+  url: 'zippy.html'
 })
 class Zippy {
   visible: boolean;
