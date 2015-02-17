@@ -1,0 +1,13 @@
+<div class="zippy">
+  <div class="zippy-title-bar" (click)="toggle()">
+    <span class="tr-zippy__icon">
+        {{ visible ? '&blacktriangledown;' : '&blacktriangleright;' }}
+    </span>
+    <span class="zippy-title">
+      Title
+    </span>
+  </div>
+  <div class="zippy-content" template="if:visible">
+    <content></content>
+  </div>
+</div>
