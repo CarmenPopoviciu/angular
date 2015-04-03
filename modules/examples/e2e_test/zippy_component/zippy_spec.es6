@@ -1,5 +1,6 @@
 var testUtil = require('angular2/src/test_lib/e2e_util');
-describe('zippy component', () => {
+
+describe('Zippy Component', () => {
 
   afterEach(testUtil.verifyNoBrowserErrors);
 
@@ -10,8 +11,8 @@ describe('zippy component', () => {
       browser.get(URL);
     });
 
-    it('should change zippy title depending on it\'s state', () => {
-      let zippyTitle = element(by.deepCss('.zippy__title'));
+    it('should change the zippy title depending on it\'s state', () => {
+      let zippyTitle = element(by.css('.zippy__title'));
 
       expect(zippyTitle.getText()).toEqual('▾ Details');
       zippyTitle.click();
@@ -19,14 +20,14 @@ describe('zippy component', () => {
     });
 
     it('should have zippy content', () => {
-      expect(element(by.deepCss('.zippy__content')).getText()).toEqual('This is some content.');
+      expect(element(by.css('.zippy__content')).getText()).toEqual('This is some content.');
     });
 
-    it('should toggle when zippy title is clicked', () => {
-      element(by.deepCss('.zippy__title')).click();
-      expect(element(by.deepCss('.zippy__content')).isDisplayed()).toBe(false);
-      element(by.deepCss('.zippy__title')).click();
-      expect(element(by.deepCss('.zippy__content')).isDisplayed()).toBe(true);
+    it('should toggle when the zippy title is clicked', () => {
+      element(by.css('.zippy__title')).click();
+      expect(element(by.css('.zippy__content')).isDisplayed()).toBe(false);
+      element(by.css('.zippy__title')).click();
+      expect(element(by.css('.zippy__content')).isDisplayed()).toBe(true);
     });
   });
 });
