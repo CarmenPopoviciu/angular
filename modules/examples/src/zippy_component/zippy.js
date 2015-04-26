@@ -24,6 +24,11 @@ export class Zippy {
 
   toggle() {
     this.visible = !this.visible;
-    this.visible ? this.openHandler() : this.closeHandler();
+    if(this.visible) {
+      this.openHandler();
+    }
+    else {
+      this.closeHandler()
+    }
   }
 }
